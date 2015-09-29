@@ -1,0 +1,20 @@
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.exe.config
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.exe
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.pdb
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.exe
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.pdb
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.exe.manifest
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.application
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.exe.manifest
+E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.application
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.config
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.pdb
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.manifest
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.application
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.pdb
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
+E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.application
