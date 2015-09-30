@@ -30,11 +30,6 @@ namespace CoinCollector
                 board = CoinGen(board, coinsNumber, level);
                 int[] consolePos = { 3, 2 }; // position of the "@" on the console
 
-                //if (level != 1)
-                //{
-                //    coinsNumber++;
-                //    wallNumber += 3;
-                //}
 
                 BoardPrint(board, points, wallHits, steps, level, totalScore);
                 ColorCoinsAndWalls(board);
@@ -60,7 +55,7 @@ namespace CoinCollector
                             isCoin = IsCoinRight(board, position);
                             if (isCoin == true)
                             {
-                                //Console.Beep();
+                                Console.Beep();
                                 CoinCollected(points);
                                 points += 100;
                             }
@@ -85,7 +80,7 @@ namespace CoinCollector
                             isCoin = IsCoinLeft(board, position);
                             if (isCoin == true)
                             {
-                                //Console.Beep();
+                                Console.Beep();
                                 CoinCollected(points);
                                 points += 100;
                             }
@@ -111,7 +106,7 @@ namespace CoinCollector
                             isCoin = IsCoinDown(board, position);
                             if (isCoin == true)
                             {
-                                //Console.Beep();
+                                Console.Beep();
                                 CoinCollected(points);
                                 points += 100; ;
                             }
@@ -136,7 +131,7 @@ namespace CoinCollector
                             isCoin = IsCoinUp(board, position);
                             if (isCoin == true)
                             {
-                                //Console.Beep();
+                                Console.Beep();
                                 CoinCollected(points);
                                 points += 100;
                             }
@@ -178,7 +173,7 @@ namespace CoinCollector
                     wallNumber += 3;
 
 
-                    //Console.WriteLine("GEEEEGEEEEE!!!!!! Your score is: {0}", finalScore);
+                    
                 }
                 else
                 {
