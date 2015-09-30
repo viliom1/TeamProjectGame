@@ -18,3 +18,13 @@ E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.p
 E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
 E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
 E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.application
+C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.exe.config
+C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.exe
+C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.pdb
+C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.exe.manifest
+C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.application
+C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.exe
+C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.pdb
+C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
+C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.exe.manifest
+C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.application
