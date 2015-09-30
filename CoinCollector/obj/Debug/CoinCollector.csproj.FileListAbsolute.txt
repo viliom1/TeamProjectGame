@@ -31,3 +31,13 @@ C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.application
 C:\Users\N\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.config
 C:\Users\N\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe
 C:\Users\N\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.pdb
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.config
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.pdb
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.manifest
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.application
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.pdb
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe.manifest
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.application
