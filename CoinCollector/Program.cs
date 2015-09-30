@@ -11,12 +11,12 @@ namespace CoinCollector
     {
         static void Main(string[] args)
         {
-            int level = 1;
-            int totalScore = 0;
-            int coinsNumber = 5;
-            int wallNumber = 15;
+            int level = 1; // level tracking
+            int totalScore = 0; // counts the total score
+            int coinsNumber = 5; // counts the number of coins
+            int wallNumber = 15; // counts the number of walls
 
-            while (level < 6)
+            while (level < 6) // change the levels
             {
                 int points = 0; //score tracking
                 int wallHits = 0; // wallhits tracking
@@ -29,7 +29,6 @@ namespace CoinCollector
                 string[,] board = WallGenerator(matrix, wallNumber, level);
                 board = CoinGen(board, coinsNumber, level);
                 int[] consolePos = { 3, 2 }; // position of the "@" on the console
-
 
                 BoardPrint(board, points, wallHits, steps, level, totalScore);
                 ColorCoinsAndWalls(board);
@@ -48,7 +47,6 @@ namespace CoinCollector
                         {
                             WallHitsUpdate(wallHits);
                             wallHits++;
-
                         }
                         else
                         {
@@ -67,7 +65,6 @@ namespace CoinCollector
                     }
                     else if (movement.Key == ConsoleKey.LeftArrow)
                     {
-
                         bool wall = IsWallLeft(board, position);
                         StepsUpdate(steps);
                         if (wall == true)
@@ -85,9 +82,7 @@ namespace CoinCollector
                                 points += 100;
                             }
 
-
                             MoveLeft(position, consolePos);
-
                         }
                     }
                     else if (movement.Key == ConsoleKey.DownArrow)
@@ -111,9 +106,7 @@ namespace CoinCollector
                                 points += 100; ;
                             }
 
-
                             MoveDown(position, consolePos);
-
                         }
                     }
                     else if (movement.Key == ConsoleKey.UpArrow)
@@ -136,9 +129,7 @@ namespace CoinCollector
                                 points += 100;
                             }
 
-
                             MoveUp(position, consolePos);
-
                         }
                     }
                     if (points == coinsNumber * 100)
@@ -146,7 +137,6 @@ namespace CoinCollector
                         break;
                     }
                 }
-
 
                 Console.WriteLine();
                 int finalScore = points - wallHits * 10 - steps; // calculating the final score
@@ -170,20 +160,13 @@ namespace CoinCollector
 
                     level++;
                     coinsNumber++;
-                    wallNumber += 3;
-
-
-                    
+                    wallNumber += 3;                    
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Your score is: {0} points. Start from the begining.", finalScore);
                 }
-                //else
-                //{
-                //    Console.WriteLine("GAME OVER !!! Your score is 0");
-                //}
 
                 Console.ReadKey();
                 Console.Clear();
@@ -217,16 +200,10 @@ namespace CoinCollector
         }
         static string[,] CoinGen(string[,] matrix, int coinsNumber, int level)
         {
-            //if (level != 1)
-            //{
-            //    coinsNumber++;
-            //}
-
             Random generator = new Random();
 
             for (int i = 0; i < coinsNumber; i++)
             {
-
                 int rndRow = generator.Next(1, 18);
                 int rndCol = generator.Next(1, 18);
                 if (matrix[rndRow, rndCol] == "$" || matrix[rndRow, rndCol] == "@")
@@ -264,7 +241,6 @@ namespace CoinCollector
                         {
                             matrix[i, j] = ".";
                         }
-
                     }
                 }
             }
@@ -383,8 +359,6 @@ namespace CoinCollector
             {
                 wall = true;
             }
-
-
             return wall;
         }
         static bool IsWallUp(string[,] matrix, int[] position)
@@ -406,7 +380,6 @@ namespace CoinCollector
             Random generator = new Random();
             for (int i = 0; i < wallNumber; i++)
             {
-
                 int rndRow = generator.Next(1, 17);
                 int rndCol = generator.Next(1, 17);
                 if (matrix[rndRow, rndCol] == "$" || matrix[rndRow, rndCol] == "|")
@@ -485,7 +458,6 @@ namespace CoinCollector
                         Console.ResetColor();
                         Console.SetCursorPosition(0, 22);
                     }
-
                 }
             }
         }
@@ -496,7 +468,6 @@ namespace CoinCollector
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.SetCursorPosition(0, i + 1);
                 Console.Write(" | ");
-
             }
             for (int i = 1; i < board.GetLength(1) * 2; i++)
             {
