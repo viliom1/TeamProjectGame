@@ -181,8 +181,8 @@ namespace CoinCollector
             for (int i = 0; i < 5; i++)
             {
  
-                int rndRow = generator.Next(1, 20);
-                int rndCol = generator.Next(1, 20);
+                int rndRow = generator.Next(1, 20);//uveli4ih prostranstvoto ot 18 na 20 v koeto mogat da se postavqt stotinki
+                int rndCol = generator.Next(1, 20);//uveli4ih prostranstvoto ot 18 na 20 v koeto mogat da se postavqt stotinki
                 if (matrix[rndRow, rndCol] == "$")
                 {
                     matrix[rndCol, rndRow] = "$";
