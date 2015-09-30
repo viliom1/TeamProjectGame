@@ -235,7 +235,7 @@ namespace CoinCollector
             position[1]++; // updating the position
             consolePos[0] += 2;// and the console position
  
-        }   // Move**** are pringting on the console with the movement you want
+        }   // Move**** are printing on the console with the movement you want
         static void MoveLeft(int[] position, int[] consolePos)
         {
             Console.SetCursorPosition(consolePos[0] - 2, consolePos[1]);
