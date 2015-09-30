@@ -181,8 +181,8 @@ namespace CoinCollector
             for (int i = 0; i < 5; i++)
             {
  
-                int rndRow = generator.Next(1, 18);
-                int rndCol = generator.Next(1, 18);
+                int rndRow = generator.Next(1, 20);
+                int rndCol = generator.Next(1, 20);
                 if (matrix[rndRow, rndCol] == "$")
                 {
                     matrix[rndCol, rndRow] = "$";
