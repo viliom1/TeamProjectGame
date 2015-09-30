@@ -28,6 +28,7 @@ C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.pdb
 C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
 C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.exe.manifest
 C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.application
+<<<<<<< HEAD
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.config
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.pdb
@@ -38,3 +39,18 @@ C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.p
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.application
+=======
+C:\Users\N\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.config
+C:\Users\N\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe
+C:\Users\N\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.pdb
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.config
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.pdb
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.manifest
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.application
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.pdb
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe.manifest
+C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.application
+>>>>>>> bc0163b6371bc15195005f4a25737ecbe11d0348
