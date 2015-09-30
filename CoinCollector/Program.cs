@@ -16,11 +16,11 @@ namespace CoinCollector
             int steps = 0; // steps tracking
             bool isCoin = false;
             string[,] matrix = new string[22, 22];
-            int[] position = { 1, 1 }; // position of the "@" in the array
+            int[] position = { 1, 1 }; // position of the "@" in the array [0] is for rows [1] is for cols
             matrix = BoardGen(matrix);
             string[,] board = WallGenerator(matrix);
             board = CoinGen(board);
-            int[] consolePos = { 3, 2 }; // position of the "@" on the console
+            int[] consolePos = { 3, 2 }; // position of the "@" on the console [0] is for cols [1] is for rows
  
             BoardPrint(board, points, wallHits, steps);
             ColorCoinsAndWalls(board);
@@ -226,9 +226,9 @@ namespace CoinCollector
         }
         static void MoveRight(int[] position, int[] consolePos)
         {
+            Console.ForegroundColor = ConsoleColor.Green;// made the hero of the game leave a trail (to see where  you were before)
             Console.SetCursorPosition(consolePos[0], consolePos[1]); // setting the cursor to the current position of the "@"
             Console.Write(". ");
-            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("@");
             Console.ResetColor();
             Console.SetCursorPosition(0, 22); // moving the cursor out of the board
@@ -238,21 +238,24 @@ namespace CoinCollector
         }   // Move**** are pringting on the console with the movement you want
         static void MoveLeft(int[] position, int[] consolePos)
         {
-            Console.SetCursorPosition(consolePos[0] - 2, consolePos[1]);
             Console.ForegroundColor = ConsoleColor.Green;
+            Console.SetCursorPosition(consolePos[0] - 2, consolePos[1]);
+            
             Console.Write("@");
-            Console.ResetColor();
+            
             Console.Write(" .");
+            Console.ResetColor();
             Console.SetCursorPosition(0, 22);
             position[1]--;
             consolePos[0] -= 2;
         }
         static void MoveDown(int[] position, int[] consolePos)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.SetCursorPosition(consolePos[0], consolePos[1]);
             Console.Write(".");
             Console.SetCursorPosition(consolePos[0], consolePos[1] + 1);
-            Console.ForegroundColor = ConsoleColor.Green;
+            
             Console.Write("@");
             Console.ResetColor();
             Console.SetCursorPosition(0, 22);
@@ -261,10 +264,11 @@ namespace CoinCollector
         }
         static void MoveUp(int[] position, int[] consolePos)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.SetCursorPosition(consolePos[0], consolePos[1]);
             Console.Write(".");
             Console.SetCursorPosition(consolePos[0], consolePos[1] - 1);
-            Console.ForegroundColor = ConsoleColor.Green;
+            
             Console.Write("@");
             Console.ResetColor();
             Console.SetCursorPosition(0, 22);
@@ -357,8 +361,8 @@ namespace CoinCollector
             for (int i = 0; i < 15; i++)
             {
  
-                int rndRow = generator.Next(1, 17);
-                int rndCol = generator.Next(1, 17);
+                int rndRow = generator.Next(2,20 );
+                int rndCol = generator.Next(2, 20);
                 if (matrix[rndRow, rndCol] == "$" || matrix[rndRow, rndCol] == "|")
                 {
                     matrix[rndRow + 1, rndCol + 1] = "|";
@@ -435,10 +439,18 @@ namespace CoinCollector
                         Console.ResetColor();
                         Console.SetCursorPosition(0, 22);
                     }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.SetCursorPosition(j * 2 + 1, i + 1);
+                        Console.Write(".");
+                        Console.ResetColor();
+                        Console.SetCursorPosition(0, 22);
+                    }
  
                 }
             }
-        }
+        }// coloring the whole board(not only coins and walls) in different colors
         static void BoardCorrection (string[,]board)
         {
             for (int i = 1; i < board.GetLength(0)-1; i++)
@@ -456,6 +468,6 @@ namespace CoinCollector
                 Console.SetCursorPosition(i, 22);
                 Console.Write("_");
             }
-        }
+        }// correcting the position of the walls to be more appealing
     }
 }
