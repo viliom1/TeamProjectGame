@@ -54,3 +54,13 @@ C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.csprojResol
 C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe.manifest
 C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.application
 >>>>>>> bc0163b6371bc15195005f4a25737ecbe11d0348
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.exe.config
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.exe
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.pdb
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.exe.manifest
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.application
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.exe
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.pdb
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
+C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.application
