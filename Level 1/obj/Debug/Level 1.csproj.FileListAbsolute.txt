@@ -1,0 +1,6 @@
+C:\Users\MMQuant\Desktop\COINS\Level 1\bin\Debug\Level 1.exe.config
+C:\Users\MMQuant\Desktop\COINS\Level 1\bin\Debug\Level 1.exe
+C:\Users\MMQuant\Desktop\COINS\Level 1\bin\Debug\Level 1.pdb
+C:\Users\MMQuant\Desktop\COINS\Level 1\obj\Debug\Level 1.csprojResolveAssemblyReference.cache
+C:\Users\MMQuant\Desktop\COINS\Level 1\obj\Debug\Level 1.exe
+C:\Users\MMQuant\Desktop\COINS\Level 1\obj\Debug\Level 1.pdb
