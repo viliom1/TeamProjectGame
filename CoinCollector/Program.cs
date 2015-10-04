@@ -19,7 +19,7 @@ namespace CoinCollector
             int totalScore = 0; // counts the total score
             int coinsNumber = 5; // counts the number of coins
             int wallNumber = 15; // counts the number of walls
-            string [][,] boards = new string[5][,];
+            
 
             while (level < 6) // change the levels
             {
