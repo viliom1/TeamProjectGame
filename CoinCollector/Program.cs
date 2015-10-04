@@ -501,6 +501,7 @@ namespace CoinCollector
         static void BCKMusic()
         {
             var player = new  WMPLib.WindowsMediaPlayer();
+            player.settings.playCount=20;
             player.URL = @"C:\Users\Vilimir\Desktop\TeamProjectGame\8-punk-8-bit-music.wav";
 
         }
