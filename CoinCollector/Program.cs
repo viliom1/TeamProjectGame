@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
+
+
 
 
 namespace CoinCollector
@@ -11,10 +14,12 @@ namespace CoinCollector
     {
         static void Main(string[] args)
         {
+            BackgroundMusic();
             int level = 1; // level tracking
             int totalScore = 0; // counts the total score
             int coinsNumber = 5; // counts the number of coins
             int wallNumber = 15; // counts the number of walls
+            string [][,] boards = new string[5][,];
 
             while (level < 6) // change the levels
             {
@@ -53,7 +58,7 @@ namespace CoinCollector
                             isCoin = IsCoinRight(board, position);
                             if (isCoin == true)
                             {
-                                Console.Beep();
+                                Coining();
                                 CoinCollected(points);
                                 points += 100;
                             }
@@ -77,7 +82,7 @@ namespace CoinCollector
                             isCoin = IsCoinLeft(board, position);
                             if (isCoin == true)
                             {
-                                Console.Beep();
+                                Coining();
                                 CoinCollected(points);
                                 points += 100;
                             }
@@ -101,7 +106,7 @@ namespace CoinCollector
                             isCoin = IsCoinDown(board, position);
                             if (isCoin == true)
                             {
-                                Console.Beep();
+                                Coining();
                                 CoinCollected(points);
                                 points += 100; ;
                             }
@@ -124,7 +129,7 @@ namespace CoinCollector
                             isCoin = IsCoinUp(board, position);
                             if (isCoin == true)
                             {
-                                Console.Beep();
+                                Coining();
                                 CoinCollected(points);
                                 points += 100;
                             }
@@ -412,6 +417,7 @@ namespace CoinCollector
         } // updates the steps
         static void WallHitsUpdate(int wallHits)
         {
+            WallSound();
             Console.ForegroundColor = ConsoleColor.Red;
             wallHits++;
             Console.SetCursorPosition(16, 0);
@@ -477,6 +483,35 @@ namespace CoinCollector
                 Console.SetCursorPosition(i, 22);
                 Console.Write("_");
             }
+        }
+        static void Coining()
+        {
+            Task.Factory.StartNew(() => CoinSound());
+
+        }
+        static void CoinSound()
+        {
+            SoundPlayer player = new SoundPlayer(CoinCollector.Resource1.pacman_coinin);
+            player.Play();
+        }
+        static void BackgroundMusic()
+        {
+            Task.Factory.StartNew(() => BCKMusic());
+        }
+        static void BCKMusic()
+        {
+            var player = new  WMPLib.WindowsMediaPlayer();
+            player.URL = @"C:\Users\Vilimir\Desktop\TeamProjectGame\8-punk-8-bit-music.wav";
+
+        }
+        static void WallSound()
+        {
+            Task.Factory.StartNew(()=> WallPlayer());
+        }
+        static void WallPlayer()
+        {
+            SoundPlayer sp = new SoundPlayer(CoinCollector.Resource1.battle028);
+            sp.Play();
         }
     }
 }

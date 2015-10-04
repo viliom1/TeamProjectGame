@@ -64,3 +64,7 @@ C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.p
 C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
 C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
 C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.application
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.Resource1.resources
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csproj.GenerateResource.Cache
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\Interop.WMPLib.dll
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csproj.ResolveComReference.cache
