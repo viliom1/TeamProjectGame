@@ -127,4 +127,10 @@
   <data name="_8_punk_8_bit_music" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\8-punk-8-bit-music.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="YEEHAW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\YEEHAW.WAV;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_06_level_complete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\06-level-complete.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

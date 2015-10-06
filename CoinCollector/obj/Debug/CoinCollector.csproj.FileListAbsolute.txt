@@ -1,70 +1,14 @@
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.exe.config
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.exe
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.pdb
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.exe
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.pdb
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.exe.manifest
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\bin\Debug\CoinCollector.application
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.exe.manifest
-E:\SoftUni\Advanced C#\Homework Solutions\MultiArr\CoinCollector\obj\Debug\CoinCollector.application
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.config
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.pdb
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.manifest
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.application
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.pdb
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
-E:\SoftUni\Team Projects\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.application
-C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.exe.config
-C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.exe
-C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.pdb
-C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.exe.manifest
-C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.application
-C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.exe
-C:\Users\NEV\Documents\tasdf\CoinCollector\bin\Debug\CoinCollector.pdb
-C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
-C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.exe.manifest
-C:\Users\NEV\Documents\tasdf\CoinCollector\obj\Debug\CoinCollector.application
-<<<<<<< HEAD
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.config
-C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe
-C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.pdb
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.manifest
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.application
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.pdb
-C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
-C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
-C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.application
-=======
-C:\Users\N\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.config
-C:\Users\N\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe
-C:\Users\N\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.pdb
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.config
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.pdb
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe.manifest
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.application
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.exe
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\bin\Debug\CoinCollector.pdb
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.exe.manifest
-C:\Users\MMQuant\Desktop\COINS\CoinCollector\obj\Debug\CoinCollector.application
->>>>>>> bc0163b6371bc15195005f4a25737ecbe11d0348
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.exe.config
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.exe
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.pdb
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.exe.manifest
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.application
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.exe
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\bin\Debug\CoinCollector.pdb
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
-C:\Users\NEV\Documents\TeamWork\CoinGame\CoinCollector\obj\Debug\CoinCollector.application
-C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.Resource1.resources
-C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csproj.GenerateResource.Cache
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\Interop.WMPLib.dll
 C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csproj.ResolveComReference.cache
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.Resource1.resources
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csproj.GenerateResource.Cache
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.application
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.pdb
+C:\Users\Vilimir\Desktop\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache

@@ -14,6 +14,7 @@ namespace CoinCollector
     {
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             BackgroundMusic();
             int level = 1; // level tracking
             int totalScore = 0; // counts the total score
@@ -26,7 +27,7 @@ namespace CoinCollector
                 int points = 0; //score tracking
                 int wallHits = 0; // wallhits tracking
                 int steps = 0; // steps tracking
-
+                bool endOfMaze = false;
                 bool isCoin = false;
                 string[,] matrix = new string[22, 22];
                 int[] position = { 1, 1 }; // position of the "@" in the array
@@ -34,7 +35,13 @@ namespace CoinCollector
                 string[,] board = WallGenerator(matrix, wallNumber, level);
                 board = CoinGen(board, coinsNumber, level);
                 int[] consolePos = { 3, 2 }; // position of the "@" on the console
-
+                switch(level)
+                {
+                    case 1: board = levelOne(level);
+                        break;
+                    case 3: board = levelTwo(level);
+                        break;
+                }
                 BoardPrint(board, points, wallHits, steps, level, totalScore);
                 ColorCoinsAndWalls(board);
                 BoardCorrection(board);
@@ -48,6 +55,11 @@ namespace CoinCollector
                         bool wall = IsWallRight(board, position);
                         StepsUpdate(steps);
                         steps++;
+                        if (IsEndOfMazeRight(board,position) == true)
+                        {
+                            MazeEndSound();
+                            break;
+                        }
                         if (wall == true)
                         {
                             WallHitsUpdate(wallHits);
@@ -72,6 +84,11 @@ namespace CoinCollector
                     {
                         bool wall = IsWallLeft(board, position);
                         StepsUpdate(steps);
+                        if (IsEndOfMazeLeft(board, position) == true)
+                        {
+                            MazeEndSound();
+                            break;
+                        }
                         if (wall == true)
                         {
                             WallHitsUpdate(wallHits);
@@ -95,6 +112,11 @@ namespace CoinCollector
                         bool wall = IsWallDown(board, position);
                         StepsUpdate(steps);
                         steps++;
+                        if (IsEndOfMazeDown(board, position) == true)
+                        {
+                            MazeEndSound();
+                            break;
+                        }
                         if (wall == true)
                         {
                             WallHitsUpdate(wallHits);
@@ -116,6 +138,11 @@ namespace CoinCollector
                     }
                     else if (movement.Key == ConsoleKey.UpArrow)
                     {
+                        if (IsEndOfMazeUp(board, position) == true)
+                        {
+                            MazeEndSound();
+                            break;
+                        }
                         bool wall = IsWallUp(board, position);
                         StepsUpdate(steps);
                         steps++;
@@ -157,6 +184,7 @@ namespace CoinCollector
                     }
                     else
                     {
+                       
                         totalScore += finalScore;
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("CONGRATULATIONS!!!YOU WON THE GAME WITH TOTAL SCORE OF {0} POINTS", totalScore);
@@ -170,7 +198,8 @@ namespace CoinCollector
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Your score is: {0} points. Start from the begining.", finalScore);
+                    Console.WriteLine("Your score is: {0} points", finalScore);
+                    level++;
                 }
 
                 Console.ReadKey();
@@ -209,8 +238,8 @@ namespace CoinCollector
 
             for (int i = 0; i < coinsNumber; i++)
             {
-                int rndRow = generator.Next(1, 18);
-                int rndCol = generator.Next(1, 18);
+                int rndRow = generator.Next(2, 20);
+                int rndCol = generator.Next(2, 20);
                 if (matrix[rndRow, rndCol] == "$" || matrix[rndRow, rndCol] == "@")
                 {
                     matrix[rndCol, rndRow] = "$";
@@ -342,7 +371,8 @@ namespace CoinCollector
         static bool IsWallRight(string[,] matrix, int[] position)
         {
             bool wall = false;
-            if (matrix.GetLength(0) == position[1] + 1 || matrix[position[0], position[1] + 1] == "|")
+            if (matrix.GetLength(0) == position[1] + 1 || matrix[position[0], position[1] + 1] == "|"
+                || matrix[position[0], position[1] + 1] == "_")
             {
                 wall = true;
             }
@@ -351,7 +381,8 @@ namespace CoinCollector
         static bool IsWallLeft(string[,] matrix, int[] position)
         {
             bool wall = false;
-            if (0 > position[1] - 1 || matrix[position[0], position[1] - 1] == "|")
+            if (0 > position[1] - 1 || matrix[position[0], position[1] - 1] == "|"
+                || matrix[position[0], position[1] - 1] == "_")
             {
                 wall = true;
             }
@@ -360,7 +391,8 @@ namespace CoinCollector
         static bool IsWallDown(string[,] matrix, int[] position)
         {
             bool wall = false;
-            if (matrix[position[0] + 1, position[1]] == "_" || matrix[position[0] + 1, position[1]] == "|")
+            if (matrix[position[0] + 1, position[1]] == "_" || matrix[position[0] + 1, position[1]] == "|"
+               || matrix[position[0] + 1, position[1]] == "_")
             {
                 wall = true;
             }
@@ -369,7 +401,8 @@ namespace CoinCollector
         static bool IsWallUp(string[,] matrix, int[] position)
         {
             bool wall = false;
-            if (matrix[position[0] - 1, position[1]] == "_" || matrix[position[0] - 1, position[1]] == "|")
+            if (matrix[position[0] - 1, position[1]] == "_" || matrix[position[0] - 1, position[1]] == "|"
+                || matrix[position[0] - 1, position[1]] == "_")
             {
                 wall = true;
             }
@@ -514,5 +547,111 @@ namespace CoinCollector
             SoundPlayer sp = new SoundPlayer(CoinCollector.Resource1.battle028);
             sp.Play();
         }
+        static bool IsEndOfMazeRight (string[,]matrix, int[] positon)
+        {
+            bool endOfMaze = false;
+            if (matrix[positon[0], positon[1] + 1] == "*")
+            {
+                endOfMaze = true;
+            }
+            return endOfMaze;
+        }
+        static bool IsEndOfMazeLeft(string[,]matrix, int[] positon)
+        {
+            bool endOfMaze = false;
+            if (matrix[positon[0], positon[1] - 1] == "*")
+            {
+                endOfMaze = true;
+            }
+            return endOfMaze;
+        }
+        static bool IsEndOfMazeDown (string[,]matrix, int[]positon)
+        {
+            bool endOfMaze = false;
+            if (matrix[positon[0] + 1, positon[1]] == "*")
+            {
+                endOfMaze = true;
+            }
+            return endOfMaze;
+        }
+        static bool IsEndOfMazeUp(string[,]matrix, int[] positon)
+        {
+            bool endOfMaze = false;
+            if (matrix[positon[0] - 1, positon[1]] == "*")
+            {
+                endOfMaze = true;
+            }
+            return endOfMaze;
+        }
+        static string[,] levelOne (int levels)
+        {
+            string[,] matrix =
+            {
+
+                {"_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_"},
+                {"|","@"," "," "," "," "," ","|"," "," "," "," "," "," "," "," "," ","|"," "," "," ","|"},
+                {"|","_","_","_","_","_"," ","|"," ","|","_","_","_","_"," "," "," ","|"," "," "," ","|"},
+                {"|"," "," "," "," ","|"," ","|"," ","|"," "," "," "," "," ","_"," "," "," ","_","_","|"},
+                {"|"," "," "," "," ","|"," ","|"," ","|"," ","|"," "," "," ","|"," "," "," "," "," ","|"},
+                {"|"," ","|","_","_","|"," ","|"," ","|"," "," "," ","|"," ","|"," "," ","|"," "," ","|"},
+                {"|"," "," "," "," "," "," ","|"," ","_","_","|","_","_"," ","_","|","_","_"," "," ","|"},
+                {"|"," "," ","_","_","|"," ","|"," "," "," ","|"," "," "," "," ","|"," ","|"," "," ","|"},
+                {"|"," "," ","|"," ","|"," ","|"," ","_"," ","|"," ","_","_"," ","|"," ","|"," ","_","|"},
+                {"|"," ","_","|"," ","|"," ","|"," "," "," ","|"," ","|","|"," ","|"," ","|"," "," ","|"},
+                {"|"," "," ","|"," ","|"," ","|","_"," ","_","|"," ","|","|"," ","|"," ","|"," "," ","|"},
+                {"|","_"," "," "," ","|"," "," "," "," "," "," "," ","|","|"," ","|"," ","_","_"," ","|"},
+                {"|"," "," ","_","_","|","_","_","_","_","_","_","_","|","|"," ","|"," "," "," "," ","|"},
+                {"|"," "," "," "," "," "," "," "," "," "," "," "," "," ","|"," "," "," "," ","_","_","|"},
+                {"|","_","_","_","_","_","_","_","|"," "," "," ","|"," ","|"," ","|","_"," ","|"," ","|"},
+                {"|"," "," ","|"," "," "," "," "," "," ","_","_","_"," ","|"," ","|"," "," ","|"," ","|"},
+                {"|","*"," ","|"," "," ","|"," "," ","|"," "," "," "," ","|"," ","|"," ","_","|"," ","|"},
+                {"|","|"," ","|","_","|","_","_","|","_","_","_","_","_","_"," ","|"," "," "," "," ","|"},
+                {"|","|"," "," "," "," "," "," "," "," "," "," "," "," "," "," ","|"," "," "," "," ","|"},
+                {"|","|","_","_","_","_","_"," ","_","_","_","_","_","_","_","_","_","_","_"," "," ","|"},
+                {"|"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","|"},
+                {"_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_"}
+            };
+            return matrix;
+        }
+        static string[,] levelTwo (int levels)
+        {
+            string[,] matrix =
+            {
+
+                {"_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_"},
+                {"|","@","|"," "," "," "," ","|"," "," "," "," "," "," "," "," "," ","|"," "," ","*","|"},
+                {"|"," ","|"," ","_","_"," ","|"," ","|","_","_","_","_"," "," "," ","|"," "," "," ","|"},
+                {"|"," ","|"," "," ","|"," ","|"," ","|"," "," "," "," "," ","_"," "," "," ","_","_","|"},
+                {"|"," ","|"," "," ","|"," ","|"," ","|"," ","|"," "," "," ","|"," "," "," "," "," ","|"},
+                {"|"," ","|","_","_","|"," ","|"," ","|"," "," "," ","|"," ","|"," "," ","|"," "," ","|"},
+                {"|"," "," "," "," "," "," "," "," ","_","_","|","_","_"," ","_","|","_","_"," "," ","|"},
+                {"|"," "," ","_","_","|"," ","|"," "," "," ","|"," "," "," "," ","|"," ","|"," "," ","|"},
+                {"|"," "," ","|"," ","|"," ","|"," ","_"," ","|"," ","_","_"," ","|"," ","|"," ","_","|"},
+                {"|"," ","_","|"," ","|"," ","|"," "," "," ","|"," ","|","|"," ","|"," ","|"," "," ","|"},
+                {"|"," "," ","|"," ","|"," ","|","_"," ","_","|"," ","|","|"," ","|"," ","|"," "," ","|"},
+                {"|","_"," "," "," ","|"," "," "," "," "," "," "," ","|","|"," ","|"," ","_","_"," ","|"},
+                {"|"," "," ","_","_","|","_","_","_","_","_","_","_","|","|"," ","|"," "," "," "," ","|"},
+                {"|"," "," "," "," "," "," "," "," "," "," "," "," "," ","|"," "," "," "," ","_","_","|"},
+                {"|"," ","_","_","_","_","_","_","|"," "," "," ","|"," ","|"," ","|","_"," ","|"," ","|"},
+                {"|"," "," ","|"," "," "," "," "," "," ","_","_","_"," ","|"," ","|"," "," ","|"," ","|"},
+                {"|"," "," "," "," "," ","|"," "," ","|"," "," "," "," ","|"," ","|"," ","_","|"," ","|"},
+                {"|"," "," ","|","_","|","_","_","|","_","_","_","_","_","_"," ","|"," "," "," "," ","|"},
+                {"|","|"," "," "," "," "," "," "," "," "," "," "," "," "," "," ","|"," "," "," "," ","|"},
+                {"|","|","_","_","_","_","_"," ","_","_","_","_","_"," ","_","_","_","_","_"," "," ","|"},
+                {"|"," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," "," ","|"},
+                {"_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_"}
+            };
+            return matrix;
+        }
+        static void MazeEndSound()
+        {
+            Task.Factory.StartNew(() => MazeEndPlayer());
+        }
+        static void MazeEndPlayer ()
+        {
+            SoundPlayer sp = new SoundPlayer(CoinCollector.Resource1.YEEHAW);
+            sp.Play();
+        }
+
     }
 }

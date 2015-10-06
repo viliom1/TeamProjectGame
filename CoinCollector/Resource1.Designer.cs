@@ -63,6 +63,15 @@ namespace CoinCollector {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _06_level_complete {
+            get {
+                return ResourceManager.GetStream("_06_level_complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream _8_punk_8_bit_music {
             get {
                 return ResourceManager.GetStream("_8_punk_8_bit_music", resourceCulture);
@@ -84,6 +93,15 @@ namespace CoinCollector {
         internal static System.IO.UnmanagedMemoryStream pacman_coinin {
             get {
                 return ResourceManager.GetStream("pacman_coinin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream YEEHAW {
+            get {
+                return ResourceManager.GetStream("YEEHAW", resourceCulture);
             }
         }
     }

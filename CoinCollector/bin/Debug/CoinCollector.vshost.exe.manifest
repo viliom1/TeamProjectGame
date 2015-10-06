@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoinCollector.exe" size="10664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CoinCollector.exe" size="23379880">
       <assemblyIdentity name="CoinCollector" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BA18558Zd34jyIuYoPjgrAJKktbtLo17MlFlKOk4Mgg=</dsig:DigestValue>
+        <dsig:DigestValue>qwal2AFADstxPRQF7J0yQCH7lMouqaIy38Ao5ZZjjzU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
