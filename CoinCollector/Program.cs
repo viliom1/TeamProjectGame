@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Media;
+using System.Threading;
 
 
 
@@ -16,6 +17,7 @@ namespace CoinCollector
         {
             Console.CursorVisible = false;
             BackgroundMusic();
+            MainMenu();
             int level = 1; // level tracking
             int totalScore = 0; // counts the total score
             int coinsNumber = 5; // counts the number of coins
@@ -27,7 +29,6 @@ namespace CoinCollector
                 int points = 0; //score tracking
                 int wallHits = 0; // wallhits tracking
                 int steps = 0; // steps tracking
-                bool endOfMaze = false;
                 bool isCoin = false;
                 string[,] matrix = new string[22, 22];
                 int[] position = { 1, 1 }; // position of the "@" in the array
@@ -652,6 +653,66 @@ namespace CoinCollector
             SoundPlayer sp = new SoundPlayer(CoinCollector.Resource1.YEEHAW);
             sp.Play();
         }
+        static void MainMenu()
+        {
+            Console.ForegroundColor  = ConsoleColor.Yellow;
+            string welcome = "                         Welcome to\"Coin collector: MAZE EDITION\"";
+            for (int i = 0; i < welcome.Length; i++)
+            {
+                Console.Write(welcome[i]);
+                Thread.Sleep(100);
+            }
+            Console.WriteLine();
+            
+            char[,] picture = MenuPicture();
+            for (int i = 0; i < picture.GetLength(0); i++)
+            {
+                for (int j = 0; j < picture.GetLength(1); j++)
+                {
+                    Console.Write("{0,2}",picture[i, j]);
+                    Thread.Sleep(5);
+                }
+                Console.WriteLine();
+            }
+            string instructions  = "Your goal is to find the way out of the maze with as little steps as possible\n\r and collect coins in the bonus level after each maze. GOOD LUCK !";
+            for (int i = 0; i < instructions.Length; i++)
+            {
+                Console.Write(instructions[i]);
+                Thread.Sleep(50);
+            }
+            Console.WriteLine("\n\rPress any key to sstart the game :)");
+            Console.ResetColor();
+            Console.ReadKey();
+            Console.Clear();
+        }
+        static char[,] MenuPicture()
+        {
+            char[,] board = {
+                                {' ',' ',' ','$','$',' ',' ',' ','$','$',' ',' ','$','$','$','$','$','$','$',' ',' ',' ','$',' ',' ',' ','$','$','$',' ',' '},
+                                {' ',' ','$',' ',' ','$',' ','$',' ',' ','$',' ',' ',' ','$',' ',' ','$','$',' ',' ',' ','$',' ',' ','$','|','|',' ','$',' '},
+                                {' ','$',' ',' ',' ','$','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$','$',' ',' ',' ','$',' ','$',' ','|','|',' ','$',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$','$',' ',' ',' ','$',' ','$',' ','|','|',' ',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$','$',' ',' ',' ','$',' ','$',' ','|','|',' ',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ','$',' ','$',' ','|','|',' ',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ','$',' ','$',' ','|','|',' ',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ','$',' ','$',' ','|','|',' ',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ','$',' ',' ','$','|','|',' ',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ','$',' ',' ',' ','$','|',' ',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ',' ','|','$',' ',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ',' ','|','|','$',' ',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ',' ','|','|',' ','$',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ',' ','|','|',' ','$',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ',' ','$',' ','$',' ',' ',' ','|','|',' ','$',' '},
+                                {' ','$',' ',' ',' ',' ','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ',' ',' ','$','$',' ',' ',' ','|','|',' ','$',' '},
+                                {' ','$',' ',' ',' ','$','$',' ',' ',' ',' ','$',' ',' ','$',' ',' ','$',' ',' ',' ','$','$',' ','$',' ','|','|',' ','$',' '},
+                                {' ',' ','$',' ',' ','$',' ','$',' ',' ','$',' ',' ',' ','$',' ',' ','$',' ',' ',' ','$','$',' ','$',' ','|','|','$',' ',' '},
+                                {' ',' ',' ','$','$',' ',' ',' ','$','$',' ',' ','$','$','$','$','$','$',' ',' ',' ','$','$',' ',' ','$','$','$',' ',' ',' '}
+
+
+                            };
+            return board;
+        }
+    
 
     }
 }
