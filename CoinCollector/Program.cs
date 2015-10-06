@@ -22,9 +22,9 @@ namespace CoinCollector
             int totalScore = 0; // counts the total score
             int coinsNumber = 5; // counts the number of coins
             int wallNumber = 15; // counts the number of walls
-            
 
-            while (level < 6) // change the levels
+
+            while (level <= 6) // change the levels
             {
                 int points = 0; //score tracking
                 int wallHits = 0; // wallhits tracking
@@ -36,11 +36,13 @@ namespace CoinCollector
                 string[,] board = WallGenerator(matrix, wallNumber, level);
                 board = CoinGen(board, coinsNumber, level);
                 int[] consolePos = { 3, 2 }; // position of the "@" on the console
-                switch(level)
+                switch (level)
                 {
                     case 1: board = levelOne(level);
                         break;
                     case 3: board = levelTwo(level);
+                        break;
+                    case 5: board = levelThree(level);
                         break;
                 }
                 BoardPrint(board, points, wallHits, steps, level, totalScore);
@@ -56,7 +58,7 @@ namespace CoinCollector
                         bool wall = IsWallRight(board, position);
                         StepsUpdate(steps);
                         steps++;
-                        if (IsEndOfMazeRight(board,position) == true)
+                        if (IsEndOfMazeRight(board, position) == true)
                         {
                             MazeEndSound();
                             break;
@@ -177,7 +179,7 @@ namespace CoinCollector
 
                 if (finalScore > 0)
                 {
-                    if (level != 5)
+                    if (level != 6)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("Proceeding to the next level with score of {0} points", finalScore);
@@ -185,7 +187,7 @@ namespace CoinCollector
                     }
                     else
                     {
-                       
+
                         totalScore += finalScore;
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("CONGRATULATIONS!!!YOU WON THE GAME WITH TOTAL SCORE OF {0} POINTS", totalScore);
@@ -194,7 +196,7 @@ namespace CoinCollector
 
                     level++;
                     coinsNumber++;
-                    wallNumber += 3;                    
+                    wallNumber += 3;
                 }
                 else
                 {
@@ -534,21 +536,21 @@ namespace CoinCollector
         }
         static void BCKMusic()
         {
-            var player = new  WMPLib.WindowsMediaPlayer();
-            player.settings.playCount=20;
+            var player = new WMPLib.WindowsMediaPlayer();
+            player.settings.playCount = 20;
             player.URL = @"C:\Users\Vilimir\Desktop\TeamProjectGame\8-punk-8-bit-music.wav";
 
         }
         static void WallSound()
         {
-            Task.Factory.StartNew(()=> WallPlayer());
+            Task.Factory.StartNew(() => WallPlayer());
         }
         static void WallPlayer()
         {
             SoundPlayer sp = new SoundPlayer(CoinCollector.Resource1.battle028);
             sp.Play();
         }
-        static bool IsEndOfMazeRight (string[,]matrix, int[] positon)
+        static bool IsEndOfMazeRight(string[,] matrix, int[] positon)
         {
             bool endOfMaze = false;
             if (matrix[positon[0], positon[1] + 1] == "*")
@@ -557,7 +559,7 @@ namespace CoinCollector
             }
             return endOfMaze;
         }
-        static bool IsEndOfMazeLeft(string[,]matrix, int[] positon)
+        static bool IsEndOfMazeLeft(string[,] matrix, int[] positon)
         {
             bool endOfMaze = false;
             if (matrix[positon[0], positon[1] - 1] == "*")
@@ -566,7 +568,7 @@ namespace CoinCollector
             }
             return endOfMaze;
         }
-        static bool IsEndOfMazeDown (string[,]matrix, int[]positon)
+        static bool IsEndOfMazeDown(string[,] matrix, int[] positon)
         {
             bool endOfMaze = false;
             if (matrix[positon[0] + 1, positon[1]] == "*")
@@ -575,7 +577,7 @@ namespace CoinCollector
             }
             return endOfMaze;
         }
-        static bool IsEndOfMazeUp(string[,]matrix, int[] positon)
+        static bool IsEndOfMazeUp(string[,] matrix, int[] positon)
         {
             bool endOfMaze = false;
             if (matrix[positon[0] - 1, positon[1]] == "*")
@@ -584,7 +586,7 @@ namespace CoinCollector
             }
             return endOfMaze;
         }
-        static string[,] levelOne (int levels)
+        static string[,] levelOne(int levels)
         {
             string[,] matrix =
             {
@@ -614,7 +616,7 @@ namespace CoinCollector
             };
             return matrix;
         }
-        static string[,] levelTwo (int levels)
+        static string[,] levelTwo(int levels)
         {
             string[,] matrix =
             {
@@ -644,18 +646,47 @@ namespace CoinCollector
             };
             return matrix;
         }
+        static string[,] levelThree(int levels)
+        {
+            string[,] matrix =
+            {
+                {"_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_"},
+                {"|","@"," ","|"," "," ","|"," "," "," "," "," "," "," "," "," "," "," "," "," "," ","|"},
+                {"|"," "," ","|"," "," ","|"," "," "," "," "," "," "," "," "," "," "," "," "," "," ","|"},
+                {"|"," "," ","|"," "," ","|"," "," ","_","_","_"," "," "," ","_","_","_","_","_","_","|"},
+                {"|"," "," ","|"," "," ","|"," "," "," "," "," ","|"," "," ","|"," "," "," ","|"," ","|"},
+                {"|"," "," ","|"," "," "," "," "," "," "," "," ","|"," "," "," "," "," "," ","|"," ","|"},
+                {"|"," "," ","|","_","_"," "," "," "," "," "," ","|"," "," "," ","_","_","_","|"," ","|"},
+                {"|"," "," "," "," "," "," "," "," ","|"," "," ","|"," "," "," "," "," "," ","|"," ","|"},
+                {"|"," "," "," "," "," "," ","_","_","|"," "," ","|","_","_","_"," "," "," ","|"," ","|"},
+                {"|","_","_","_","_","_"," "," "," "," "," "," "," "," "," ","|"," "," "," "," "," ","|"},
+                {"|"," "," "," "," "," "," "," "," ","_","_","_"," "," "," ","|"," "," "," "," "," ","|"},
+                {"|"," "," "," "," "," "," "," "," "," "," ","|"," "," "," ","|","_","_","_","_","_","|"},
+                {"|"," "," ","_","_","_","_","_","_","_","_","|"," "," "," "," "," "," "," "," "," ","|"},
+                {"|"," "," "," "," "," ","|"," "," "," "," "," "," "," "," "," "," "," "," "," "," ","|"},
+                {"|"," "," "," "," "," ","|"," "," "," "," ","_","_","_","_","_","_","_","_"," "," ","|"},
+                {"|","_","_","_","_","_","|"," "," "," "," ","|"," "," "," "," "," "," "," "," "," ","|"},
+                {"|"," "," "," "," "," "," "," "," "," "," ","|"," "," ","_","_","_","_","_","_"," ","|"},
+                {"|"," "," ","_","_","_","_","_","_","_","_","|"," "," "," "," "," "," "," ","|"," ","|"},
+                {"|"," "," "," "," "," "," ","|"," "," "," "," "," "," ","_","_"," "," "," ","|"," ","|"},
+                {"|"," "," "," "," "," "," ","|"," "," "," "," "," "," "," ","|"," "," "," ","|"," ","|"},
+                {"|"," "," "," "," "," "," ","|"," "," "," "," "," "," "," ","|"," "," ","*","|"," ","|"},
+                {"_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_","_"}
+            };
+            return matrix;
+        }
         static void MazeEndSound()
         {
             Task.Factory.StartNew(() => MazeEndPlayer());
         }
-        static void MazeEndPlayer ()
+        static void MazeEndPlayer()
         {
             SoundPlayer sp = new SoundPlayer(CoinCollector.Resource1.YEEHAW);
             sp.Play();
         }
         static void MainMenu()
         {
-            Console.ForegroundColor  = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             string welcome = "                         Welcome to\"Coin collector: MAZE EDITION\"";
             for (int i = 0; i < welcome.Length; i++)
             {
@@ -663,18 +694,18 @@ namespace CoinCollector
                 Thread.Sleep(100);
             }
             Console.WriteLine();
-            
+
             char[,] picture = MenuPicture();
             for (int i = 0; i < picture.GetLength(0); i++)
             {
                 for (int j = 0; j < picture.GetLength(1); j++)
                 {
-                    Console.Write("{0,2}",picture[i, j]);
+                    Console.Write("{0,2}", picture[i, j]);
                     Thread.Sleep(5);
                 }
                 Console.WriteLine();
             }
-            string instructions  = "Your goal is to find the way out of the maze with as little steps as possible\n\r and collect coins in the bonus level after each maze. GOOD LUCK !";
+            string instructions = "Your goal is to find the way out of the maze with as little steps as possible\n\r and collect coins in the bonus level after each maze. GOOD LUCK !";
             for (int i = 0; i < instructions.Length; i++)
             {
                 Console.Write(instructions[i]);
@@ -712,7 +743,7 @@ namespace CoinCollector
                             };
             return board;
         }
-    
+
 
     }
 }
