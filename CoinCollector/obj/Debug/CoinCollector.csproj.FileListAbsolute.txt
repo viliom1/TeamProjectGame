@@ -26,3 +26,17 @@ C:\Users\NEV\Documents\TeamWork\sdf\CoinCollector\obj\Debug\CoinCollector.Resour
 C:\Users\NEV\Documents\TeamWork\sdf\CoinCollector\obj\Debug\CoinCollector.csproj.GenerateResource.Cache
 C:\Users\NEV\Documents\TeamWork\sdf\CoinCollector\obj\Debug\CoinCollector.exe.manifest
 C:\Users\NEV\Documents\TeamWork\sdf\CoinCollector\obj\Debug\CoinCollector.application
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.config
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\Interop.WMPLib.dll
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csproj.ResolveComReference.cache
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.pdb
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe.manifest
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.application
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.exe
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\bin\Debug\CoinCollector.pdb
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csprojResolveAssemblyReference.cache
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.Resource1.resources
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.csproj.GenerateResource.Cache
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.exe.manifest
+C:\Users\Vilimir\Documents\GitHub\TeamProjectGame\CoinCollector\obj\Debug\CoinCollector.application

@@ -188,7 +188,7 @@ namespace CoinCollector
                     else
                     {
 
-                        totalScore += finalScore;
+                        
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("CONGRATULATIONS!!!YOU WON THE GAME WITH TOTAL SCORE OF {0} POINTS", totalScore);
                         break;
@@ -421,8 +421,8 @@ namespace CoinCollector
             Random generator = new Random();
             for (int i = 0; i < wallNumber; i++)
             {
-                int rndRow = generator.Next(1, 17);
-                int rndCol = generator.Next(1, 17);
+                int rndRow = generator.Next(2, 19);
+                int rndCol = generator.Next(2, 19);
                 if (matrix[rndRow, rndCol] == "$" || matrix[rndRow, rndCol] == "|")
                 {
                     matrix[rndRow + 1, rndCol + 1] = "|";
@@ -711,7 +711,7 @@ namespace CoinCollector
                 Console.Write(instructions[i]);
                 Thread.Sleep(50);
             }
-            Console.WriteLine("\n\rPress any key to sstart the game :)");
+            Console.WriteLine("\n\rPress any key to start the game :)");
             Console.ResetColor();
             Console.ReadKey();
             Console.Clear();
